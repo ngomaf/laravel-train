@@ -1,0 +1,468 @@
+/**
+*
+*
+*
+*   darosa template
+*   theme rose-dark
+* 
+*   29 sept. 2025
+*   by ngoma fortuna
+*/
+
+
+
+/* reset */
+
+*,
+*::before,
+*::after {margin: 0; padding: 0; box-sizing: border-box;}
+
+:root {
+    --backgroud-default: #0a0a0a;
+    --backgroud-main: #161615;
+
+    --color-default: #a1a09a;
+
+    /* pink */
+    --pink-dark-50:  #fdf2f8;
+    --pink-dark-200: #fbcfe8;
+    --pink-dark-600: #db2777;
+    --pink-dark-700: #be185d; /* main */
+    --pink-dark-800: #9d174d;
+    --pink-dark-900: #831843;
+    --pink-dark-950: #500724;
+
+    /* green */  
+    --green-dark-200: #99d3b3;
+    --green-dark-500: #0f6a44;
+
+    --red-dark-200: #f7aaaa;
+    --red-dark-500: #c62828;
+}
+
+
+/* setting */
+
+body {font: normal 14px "Lucida Grande", Helvetica, Arial, sans-serif; background-color: var(--backgroud-default); color: var(--color-default); line-height: 23px;}
+
+
+
+/*  app style  */
+
+/* componets */
+
+body > div {
+    margin: 40px auto 0;
+    width: 90%;
+    background-color: var(--backgroud-main);
+}
+
+header,
+main {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    margin: 15px 0;
+    color: #fff;
+}
+
+p, li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--pink-dark-700);
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--pink-dark-600);
+    text-decoration: underline;
+}
+
+
+
+.btn {
+    background-color: var(--pink-dark-700);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 23px;
+    border-radius: 30px;
+    transition: .3s;
+    border: none;
+
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.btn:hover {
+    background-color: var(--pink-dark-600);
+    text-decoration: none;
+    color: #fff;
+}
+
+.default-list li::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: var(--default-color);
+
+    box-shadow: 0 0 1px 2px;
+}
+
+
+.links {
+    margin-top: 15px;
+}
+
+
+.links a,
+.links button {
+    margin-right: 15px;
+}
+
+
+.links a {
+    color: var(--pink-dark-900);
+}
+
+
+
+/* header */
+
+header {
+    border-top: 10px solid var(--pink-dark-800);
+    border-bottom: 1px solid var(--pink-dark-950);
+    background-color: var(--backgroud-main);
+    padding: 30px 5% 25px;
+    line-height: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    font-size: 18pt;
+    color: var(--pink-dark-600);
+    text-decoration: none;
+}
+
+header h1 span {
+    font-size: 12pt;
+    font-weight: normal;
+    color: var(--pink-dark-900);
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header nav .btn {
+    padding: 10px 15px;
+    font-size: 11pt;
+    background-color: var(--pink-dark-800);
+}
+
+
+
+/* main */
+
+main {
+    width: 90%;
+    margin: 0 auto 40px;
+    padding-bottom: 40px;
+}
+
+main section {
+    padding: 0 0 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--pink-dark-950);
+}
+
+main section h2 {
+    margin-bottom: 40px;
+}
+
+main section:last-child {
+    border-bottom: none;
+}
+
+main .posts article {
+    margin-bottom: 40px;
+}
+
+main .posts article > span,
+main > article > span {
+    background-color: var(--pink-dark-900);
+    color: var(--pink-dark-200);
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+
+    font-size: 18pt;
+    padding: 14px 13px;
+}
+
+main .posts article h1 {
+    font-weight: normal;
+    font-size: 18pt;
+}
+
+main .posts article p:last-child a {
+    font-size: 14pt;
+}
+
+main .posts article p:last-child a::after {
+    content: ' »';
+}
+
+main .posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main .posts-densed article {
+    flex: 0 1 200px;
+}
+
+
+
+
+
+
+/* handing icons */
+
+.handing-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.handing-icons li {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 20px;
+}
+
+.handing-icons li > div:first-child {
+    padding-top: 5px;
+}
+
+.handing-icons li > div:first-child span {
+    font-size: 25pt;
+    color: var(--pink-dark-900);
+}
+
+.handing-icons li h2 {
+    font-weight: normal;
+    font-size: 16pt;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* single article */
+main > article {
+    display: flex;
+    gap: 20px;
+}
+
+main > article > div > h1 {
+    margin-top: 0;
+}
+
+
+
+
+
+
+/* form */
+main > form input {
+    border: none;
+    background-color: #191918;
+    border-bottom: 1px solid var(--pink-dark-900);
+    color: var(--color-default);
+    font-size: 14pt;
+    padding: 5px;
+    margin-bottom: 15px;
+    outline: none;
+
+    width: 100%;
+}
+
+main > form input:focus {
+    border-bottom: 1px solid var(--pink-dark-700);
+    color: var(--color-default);
+}
+
+main .links .btn::after {
+    content: ' »';
+}
+
+
+
+/* msg */
+.msg-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.739);
+
+    display: flex;
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center;     /* Centraliza na vertical */
+    height: 100vh;
+}
+
+.msg-body > div {
+    width: 90%;
+    text-align: right;
+}
+
+.msg-body .close {
+    font-size: 30px; 
+    cursor: pointer;
+    transition: .3s;
+}
+
+.msg-body .close:hover {
+    color: #fff;
+}
+
+.msg-body .msg {
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 12pt;
+}
+
+.msg-body h3 {
+    margin-bottom: 10px;
+
+}
+
+.msg-body h3 span {
+    margin-right: 10px;
+    font-size: 20px; 
+}
+
+.success {
+    background-color: var(--green-dark-500);
+    color: var(--green-dark-200);
+}
+
+.success h3 span {
+    color: green;
+}
+
+.success h3 {
+    color: var(--green-dark-200);
+}
+
+.error {
+    background-color: var(--red-dark-500);
+    color: var(--red-dark-200);
+}
+
+.error h3 {
+    color: var(--red-dark-200);
+}
+
+.error h3 span {
+    color: red;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+
+
+
+
+@media(min-width: 500px) {
+
+    header {
+        line-height: 23px;
+    }
+    
+    main > form input {
+        width: 350px;
+    }
+    
+    main > form.login-form input {
+        width: auto;
+    }
+}
+
+
+
+
+
+
+@media(min-width: 850px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    body > div {
+        margin-top: 0;
+        height: 80vh;
+        width: 750px;
+        overflow-y: auto;
+
+        border-radius: 30px;
+    }
+
+    main {
+        width: 90%;
+        margin: 0 auto 40px;
+        padding-bottom: 0;
+    }
+
+    main section > h2 {
+        margin-bottom: 30px;
+    }
+
+    .posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .posts article {
+        flex: 1 0 300px;
+    }
+
+    .handing-icons li {
+        flex: 1 1 300px;
+    }
+
+
+
+    /* msg */
+    .msg-body > div {
+        width: 600px;
+    }
+}

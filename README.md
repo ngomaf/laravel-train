@@ -12,7 +12,7 @@
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
 # commands
-## Requisitess
+## Requisites
 
 * PHP 8.2 ou superior - Conferir a versão: php -v
 * Composer - Conferir a instalação: composer --version
@@ -29,6 +29,11 @@ composer create-project laravel/laravel .
 Iniciar o projeto criado com Laravel.
 ```
 php artisan serve
+```
+
+Gerar a chave para o arquivo .env.
+```
+php artisan key:generate
 ```
 
 Acessar o conteúdo padrão do Laravel
