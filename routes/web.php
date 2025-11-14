@@ -11,5 +11,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/create-user', [UserController::class, 'create'])->name('user.create');
 Route::get('/create-login', [UserController::class, 'login'])->name('user.login');
+Route::get('/create-user', [UserController::class, 'create'])->name('user.create');
+Route::post('/store-user', [UserController::class, 'store'])->name('user.store');
